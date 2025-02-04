@@ -1,7 +1,6 @@
 #!/bin/bash
 #install_pro.sh
 
-apk add git
 apk add mc
 apk add dnsmasq
 apk add busybox-extras
