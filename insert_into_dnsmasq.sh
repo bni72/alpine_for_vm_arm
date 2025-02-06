@@ -1,5 +1,5 @@
 #!/bin/bash
-#insert_into_dnsmasq.sh
+# insert_into_dnsmasq.sh
 
 FILE_DNSMASQ="/etc/dnsmasq.conf"
 
