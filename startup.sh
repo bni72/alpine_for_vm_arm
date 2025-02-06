@@ -1,4 +1,5 @@
 #!/bin/bash
+# startup.sh
 
 FILE_LOG="/var/log/startup.log"
 
