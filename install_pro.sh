@@ -8,3 +8,4 @@ apk add curl
 apk add wget
 apk add iptables
 apk add nginx
+apk add tzdata
