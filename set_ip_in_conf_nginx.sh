@@ -1,4 +1,5 @@
 #!/bin/bash
+# set_ip_in_conf_nginx.sh
 
 FILE_CONF="/etc/nginx/http.d/babin-den.conf"
 
@@ -27,5 +28,3 @@ echo "    error_page 500 502 503 504 /50x.html;" >> $FILE_CONF
 echo "    location = /50x.html {" >> $FILE_CONF
 echo "    }" >> $FILE_CONF
 echo "}" >> $FILE_CONF
-
-rc-service nginx restart
