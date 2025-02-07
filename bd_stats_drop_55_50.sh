@@ -20,7 +20,6 @@ echo "$STATS" | while read line; do
     echo "<tr><td>${line// /</td><td>}</td></tr>" >> $FILE_HTML
 done
 
-
 echo "</table>" >> $FILE_HTML
 echo "<p>Last updated: $(date)</p>" >> $FILE_HTML
 echo "</body>" >> $FILE_HTML
