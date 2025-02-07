@@ -3,7 +3,7 @@
 
 $FILE_HTML="/var/www/html/index.html"
 
-STATS=$(iptables -L FORWARD -v -n | grep "192.168.55.0/24" | awk '{print $1, $2, $8, $9}')
+STATS=$(iptables -L FORWARD -v -n | grep "DROP" | awk '{print $1, $2, $8, $9}')
 
 echo "<!DOCTYPE html>" > $FILE_HTML
 echo "<html lang='en'>" >> $FILE_HTML
@@ -17,7 +17,7 @@ echo "<table border='1'>" >> $FILE_HTML
 echo "<tr><th>Packets</th><th>Bytes</th><th>Source</th><th>Destination</th></tr>" >> $FILE_HTML
 
 echo "$STATS" | while read line; do
-    echo "<tr><td>${line// /</td><td>}</td></tr>" >> $WEB_PAGE
+    echo "<tr><td>${line// /</td><td>}</td></tr>" >> $FILE_HTML
 done
 
 
