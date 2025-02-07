@@ -1,7 +1,7 @@
 #!/bin/bash
 # bd_stats_drop_55_50.sh
 
-$FILE_HTML="/var/www/html/index.html"
+FILE_HTML="/var/www/html/index.html"
 
 STATS=$(iptables -L FORWARD -v -n | grep "DROP" | awk '{print $1, $2, $8, $9}')
 
