@@ -3,7 +3,7 @@
 
 FILE_HTML="/var/www/html/index.html"
 
-STATS=$(iptables -L FORWARD -v -n | grep "DROP" | awk '{print $1, $2, $8, $9}')
+STATS=$(/usr/sbin/iptables -L FORWARD -v -n | grep "DROP" | awk '{print $1, $2, $8, $9}')
 
 echo "<!DOCTYPE html>" > $FILE_HTML
 echo "<html lang='en'>" >> $FILE_HTML
